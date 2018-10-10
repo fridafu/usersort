@@ -2,7 +2,8 @@
 #   parameter gain_e = ...
 # and so on
 #gain file gainshifts_plain.dat
-gain file gainshifts_zn68.dat
+#gain file gainshifts_zn68.dat
+gain file gainshifts_si28_oscarcal.dat
 
 
 # (constant fraction) cactus energy correction parameters for cactus time
@@ -52,24 +53,24 @@ parameter thick_range = 125 15 0
 
 # Fit of rkinz/qkinz column 1 as function of qkinz/rkinz column 6
 #  240Pu(d,p) -- REALLY CHANGE THESE TO YOUR REACTION!!! WRITE IN KeV
-parameter ex_from_ede    = 15.169624e+3 -0.992924 -0.0011353e-3 \
-15.167861e+3 -0.991714 -0.001166e-3 \
-15.166323e+3 -0.990595 -0.001192e-3 \
-15.163945e+3 -0.989358 -0.001221e-3 \
-15.160642e+3 -0.987996 -0.001254e-3 \
-15.156309e+3 -0.986502 -0.001291e-3 \
-15.150816e+3 -0.984864 -0.001332e-3 \
-15.144004e+3 -0.983068 -0.001378e-3
+parameter ex_from_ede    = 1.51678e+4 -9.9171e-1 -1.166e-6 \
+1.5521e+4 -9.6197e-1 -1.4187e-6 \
+1.5514e+4 -9.6096e-1 -1.4466e-6 \
+1.5505e+4 -9.5981e-1 -1.4785e-6 \
+1.5495e+4 -9.5852e-1 -1.5148e-6 \
+1.5484e+4 -9.5707e-1 -1.5558e-6 \
+1.5471e+4 -9.5545e-1 -1.6023e-6 \
+1.5455e+4 -9.5363e-1 -1.6550e-6
 
 # empirical excitation energy correction for the above, e.g. from known peaks
-parameter ex_corr_exp    =     0 1 \
-    0 1 \
-    0 1 \
-    0 1 \
-    0 1 \
-    0 1 \
-    0 1 \
-    0 1 \
+parameter ex_corr_exp    =     11 1 \
+    8 1 \
+    8 1 \
+    8 1 \
+    8 1 \
+    8 1 \
+    10 1 \
+    14 1 \
 
 # NaI time gates, for making the ALFNA matrices 
 # found by looking at the m_nai_t plot and projecting it
@@ -116,22 +117,23 @@ parameter channel_PPAC = 4 12 30 31
 
 #data directory Datafiles
 # data directory /path/to/data_dir
-data directory /Users/frida/Uni/Master/sorting/usersort
+data directory /Users/frida/usersort
 #maximum number of buffers to read for each file; for testing
 #max_buffers 1
 
 # Zn68
 # list all data files
+data file sirius-20180123-102129.data
 #data file sirius-20180123-160159.data
 #data file sirius-20180123-115357.data
-data file sirius-20180123-115357-big-000.data
-data file sirius-20180123-112829.data
-data file sirius-20180123-173618.data
-data file sirius-20180123-173618-big-000.data
+#data file sirius-20180123-115357-big-000.data #Zn68
+#data file sirius-20180123-112829.data #Zn68
+#data file sirius-20180123-173618.data #Zn68
+#data file sirius-20180123-173618-big-000.data #Zn68
 #data file sirius-20180124-164441-big-000.data
 #data file sirius-20180124-164441.data
 #data file sirius-20180124-224822.data
-#data file sirius-20180125-091200.data
+data file sirius-20180125-091200.data
 
 # Write to MAMA matrix 
 #export mama h_ex_f0 h_ex_f0_MAMA

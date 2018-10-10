@@ -1,0 +1,39 @@
+.depend-SiriusRoutine.dep SiriusRoutine.o: SiriusRoutine.cpp SiriusRoutine.h UserRoutine.h \
+  Histograms.h Parameters.h Event.h Histogram1D.h Histogram2D.h \
+  /usr/local/Cellar/root/6.12.04_1/include/root/TFile.h \
+  /usr/local/Cellar/root/6.12.04_1/include/root/TDirectoryFile.h \
+  /usr/local/Cellar/root/6.12.04_1/include/root/TDirectory.h \
+  /usr/local/Cellar/root/6.12.04_1/include/root/TBuffer.h \
+  /usr/local/Cellar/root/6.12.04_1/include/root/TObject.h \
+  /usr/local/Cellar/root/6.12.04_1/include/root/RConfigure.h \
+  /usr/local/Cellar/root/6.12.04_1/include/root/Rtypes.h \
+  /usr/local/Cellar/root/6.12.04_1/include/root/RtypesCore.h \
+  /usr/local/Cellar/root/6.12.04_1/include/root/RConfig.h \
+  /usr/local/Cellar/root/6.12.04_1/include/root/RVersion.h \
+  /usr/local/Cellar/root/6.12.04_1/include/root/DllImport.h \
+  /usr/local/Cellar/root/6.12.04_1/include/root/snprintf.h \
+  /usr/local/Cellar/root/6.12.04_1/include/root/strlcpy.h \
+  /usr/local/Cellar/root/6.12.04_1/include/root/TGenericClassInfo.h \
+  /usr/local/Cellar/root/6.12.04_1/include/root/TSchemaHelper.h \
+  /usr/local/Cellar/root/6.12.04_1/include/root/TIsAProxy.h \
+  /usr/local/Cellar/root/6.12.04_1/include/root/TVirtualIsAProxy.h \
+  /usr/local/Cellar/root/6.12.04_1/include/root/TStorage.h \
+  /usr/local/Cellar/root/6.12.04_1/include/root/TVersionCheck.h \
+  /usr/local/Cellar/root/6.12.04_1/include/root/TNamed.h \
+  /usr/local/Cellar/root/6.12.04_1/include/root/TString.h \
+  /usr/local/Cellar/root/6.12.04_1/include/root/TMathBase.h \
+  /usr/local/Cellar/root/6.12.04_1/include/root/RStringView.h \
+  /usr/local/Cellar/root/6.12.04_1/include/root/TList.h \
+  /usr/local/Cellar/root/6.12.04_1/include/root/TSeqCollection.h \
+  /usr/local/Cellar/root/6.12.04_1/include/root/TCollection.h \
+  /usr/local/Cellar/root/6.12.04_1/include/root/TIterator.h \
+  /usr/local/Cellar/root/6.12.04_1/include/root/TVirtualRWMutex.h \
+  /usr/local/Cellar/root/6.12.04_1/include/root/TVirtualMutex.h \
+  /usr/local/Cellar/root/6.12.04_1/include/root/TDatime.h \
+  /usr/local/Cellar/root/6.12.04_1/include/root/TUUID.h \
+  /usr/local/Cellar/root/6.12.04_1/include/root/TMap.h \
+  /usr/local/Cellar/root/6.12.04_1/include/root/THashTable.h \
+  /usr/local/Cellar/root/6.12.04_1/include/root/TUrl.h \
+  /usr/local/Cellar/root/6.12.04_1/include/root/ROOT/TRWSpinLock.hxx \
+  /usr/local/Cellar/root/6.12.04_1/include/root/ROOT/TSpinMutex.hxx \
+  debug.h
