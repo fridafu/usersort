@@ -224,7 +224,7 @@ bool UserXY::Command(const std::string& cmd)
 //    const int max_e = 20000, max_de = 10000;
     //Changed the maximum energy (x axis) and maximum delta energy (y axis) into something sensible for this plot
     //Don´t have to zoome like crazy everytime I make a particle spectrum :)
-    const int max_e = 17000, max_de = 6000;
+    const int max_e = 15000, max_de = 6000;
 
      m_back = Mat( "m_back", "back detector energies",
                   2000, 0, max_e, "E(Si) [keV]", 8, 0, 8, "detector nr." );
@@ -745,10 +745,46 @@ bool UserXY::Sort(const Event& event)
  #endif /* MAKE_INDIVIDUAL_E_DE_PLOTS */
    
      // fit of kinz Ex(E+DE)
-     const float ex_theo = ex_from_ede[3*dei+0] + (ede)*(ex_from_ede[3*dei+1] + (ede*ede)*ex_from_ede[3*dei+2]);
+     // const float ex_theo = ex_from_ede[3*dei+0] + (ede)*(ex_from_ede[3*dei+1] + (ede*ede)*ex_from_ede[3*dei+2]);
      //const float ex_theo = ex_from_ede.Poly(ede, 3*dei, 3);
 
-     // make experimental corrections
+     //Didn't find the mistake, hard coding in the numbers from QKinz
+     // constant [keV]
+     float a0_ex[8] ={ 
+        1.5168e+4,
+        1.5521e+4,
+        1.5514e+4,
+        1.5505e+4,
+        1.5495e+4,
+        1.5484e+4,
+        1.5471e+4,
+        1.5455e+4};
+
+    // first order [no unit]
+    float a1_ex[8]={ -9.9171e-1,
+        -9.6197e-1,
+        -9.6096e-1,
+        -9.5981e-1,
+        -9.5852e-1,
+        -9.5707e-1,
+        -9.5545e-1,
+        -9.5363e-1};
+
+    //second order [keV^-1]
+    float a2_ex[8]={ -1.166e-6,
+        -1.4187e-6,
+        -1.4466e-6,
+        -1.4785e-6,
+        -1.5148e-6,
+        -1.5558e-6,
+        -1.6023e-6,
+        -1.6550e-6};
+
+    // fit of kinz Ex(E+DE)
+    //hardcoding the second order transformation    
+    const float ex_theo = a0_ex[dei] + ede*a1_ex[dei]+ede*ede*a2_ex[dei];
+
+     // make experimental corrections, this is not hardcoded but seems to work!
      const float ex = ex_corr_exp[2*dei]+ex_corr_exp[2*dei+1]*ex_theo;
      const int   ex_int = (int)ex;
 
