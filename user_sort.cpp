@@ -224,7 +224,7 @@ bool UserXY::Command(const std::string& cmd)
 //    const int max_e = 20000, max_de = 10000;
     //Changed the maximum energy (x axis) and maximum delta energy (y axis) into something sensible for this plot
     //Don´t have to zoome like crazy everytime I make a particle spectrum :)
-    const int max_e = 17000, max_de = 6000;
+    const int max_e = 15000, max_de = 6000;
 
      m_back = Mat( "m_back", "back detector energies",
                   2000, 0, max_e, "E(Si) [keV]", 8, 0, 8, "detector nr." );
@@ -745,10 +745,46 @@ bool UserXY::Sort(const Event& event)
  #endif /* MAKE_INDIVIDUAL_E_DE_PLOTS */
    
      // fit of kinz Ex(E+DE)
-     const float ex_theo = ex_from_ede[3*dei+0] + (ede)*(ex_from_ede[3*dei+1] + (ede*ede)*ex_from_ede[3*dei+2]);
+     // const float ex_theo = ex_from_ede[3*dei+0] + (ede)*(ex_from_ede[3*dei+1] + (ede*ede)*ex_from_ede[3*dei+2]);
      //const float ex_theo = ex_from_ede.Poly(ede, 3*dei, 3);
 
-     // make experimental corrections
+     //Didn't find the mistake, hard coding in the numbers from QKinz
+     // constant [keV]
+     float a0_ex[8] ={ 
+        1.5169e+4,
+        1.5168e+4,
+        1.5166e+4,
+        1.5164e+4,
+        1.5161e+4,
+        1.5156e+4,
+        1.5151e+4,
+        1.5144e+4};
+
+    // first order [no unit]
+    float a1_ex[8]={ -9.9292e-1,
+        -9.9171e-1,
+        -9.9906e-1,
+        -9.8936e-1,
+        -9.8800e-1,
+        -9.8650e-1,
+        -9.8486e-1,
+        -9.8307e-1};
+
+    //second order [keV^-1]
+    float a2_ex[8]={ -1.135e-6,
+        -1.166e-6,
+        -1.192e-6,
+        -1.221e-6,
+        -1.254e-6,
+        -1.291e-6,
+        -1.332e-6,
+        -1.378e-6};
+
+    // fit of kinz Ex(E+DE)
+    //hardcoding the second order transformation    
+    const float ex_theo = a0_ex[dei] + ede*a1_ex[dei]+ede*ede*a2_ex[dei];
+
+     // make experimental corrections, this is not hardcoded but seems to work!
      const float ex = ex_corr_exp[2*dei]+ex_corr_exp[2*dei+1]*ex_theo;
      const int   ex_int = (int)ex;
 
