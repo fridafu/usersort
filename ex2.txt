@@ -53,7 +53,7 @@ parameter thick_range = 125 15 0
 
 # Fit of rkinz/qkinz column 1 as function of qkinz/rkinz column 6
 #  240Pu(d,p) -- REALLY CHANGE THESE TO YOUR REACTION!!! WRITE IN KeV
-parameter ex_from_ede    = 1.51678e+4 -9.9171e-1 -1.166e-6 \
+parameter ex_from_ede    = 15.169624e3 -0.992924 -0.001135e-3 \
 1.5521e+4 -9.6197e-1 -1.4187e-6 \
 1.5514e+4 -9.6096e-1 -1.4466e-6 \
 1.5505e+4 -9.5981e-1 -1.4785e-6 \
@@ -63,14 +63,14 @@ parameter ex_from_ede    = 1.51678e+4 -9.9171e-1 -1.166e-6 \
 1.5455e+4 -9.5363e-1 -1.6550e-6
 
 # empirical excitation energy correction for the above, e.g. from known peaks
-parameter ex_corr_exp    =     11 1 \
-    8 1 \
-    8 1 \
-    8 1 \
-    8 1 \
-    8 1 \
-    10 1 \
-    14 1 \
+parameter ex_corr_exp    =     0 1 \
+    0 1 \
+    0 1 \
+    0 1 \
+    0 1 \
+    0 1 \
+    0 1 \
+    0 1 \
 
 # NaI time gates, for making the ALFNA matrices 
 # found by looking at the m_nai_t plot and projecting it
@@ -121,19 +121,19 @@ data directory /Users/frida/usersort
 #maximum number of buffers to read for each file; for testing
 #max_buffers 1
 
-# Zn68
+# Zn68 is 4,5,6,7
 # list all data files
-data file sirius-20180123-102129.data
+#data file sirius-20180123-102129.data
 #data file sirius-20180123-160159.data
 #data file sirius-20180123-115357.data
-#data file sirius-20180123-115357-big-000.data #Zn68
-#data file sirius-20180123-112829.data #Zn68
-#data file sirius-20180123-173618.data #Zn68
-#data file sirius-20180123-173618-big-000.data #Zn68
+data file sirius-20180123-115357-big-000.data
+data file sirius-20180123-112829.data
+data file sirius-20180123-173618.data
+data file sirius-20180123-173618-big-000.data
 #data file sirius-20180124-164441-big-000.data
 #data file sirius-20180124-164441.data
 #data file sirius-20180124-224822.data
-data file sirius-20180125-091200.data
+#data file sirius-20180125-091200.data #Si
 
 # Write to MAMA matrix 
 #export mama h_ex_f0 h_ex_f0_MAMA

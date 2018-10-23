@@ -751,6 +751,7 @@ bool UserXY::Sort(const Event& event)
      //Didn't find the mistake, hard coding in the numbers from QKinz
      // constant [keV]
      float a0_ex[8] ={ 
+<<<<<<< HEAD
         1.5168e+4,
         1.5521e+4,
         1.5514e+4,
@@ -779,6 +780,36 @@ bool UserXY::Sort(const Event& event)
         -1.5558e-6,
         -1.6023e-6,
         -1.6550e-6};
+=======
+        1.5169e+4,
+        1.5168e+4,
+        1.5166e+4,
+        1.5164e+4,
+        1.5161e+4,
+        1.5156e+4,
+        1.5151e+4,
+        1.5144e+4};
+
+    // first order [no unit]
+    float a1_ex[8]={ -9.9292e-1,
+        -9.9171e-1,
+        -9.9906e-1,
+        -9.8936e-1,
+        -9.8800e-1,
+        -9.8650e-1,
+        -9.8486e-1,
+        -9.8307e-1};
+
+    //second order [keV^-1]
+    float a2_ex[8]={ -1.135e-6,
+        -1.166e-6,
+        -1.192e-6,
+        -1.221e-6,
+        -1.254e-6,
+        -1.291e-6,
+        -1.332e-6,
+        -1.378e-6};
+>>>>>>> 8db59286c32588ad9fc97c328193008a86b5a039
 
     // fit of kinz Ex(E+DE)
     //hardcoding the second order transformation    
