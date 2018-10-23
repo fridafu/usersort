@@ -121,9 +121,9 @@ data directory /Users/frida/usersort
 #maximum number of buffers to read for each file; for testing
 #max_buffers 1
 
-# Zn68 is 4,5,6,7, Si28 is first and last. DON’T CHANGE THE ORDER..
+# Zn68 is 4,5,6,7
 # list all data files
-data file sirius-20180123-102129.data
+#data file sirius-20180123-102129.data
 #data file sirius-20180123-160159.data
 #data file sirius-20180123-115357.data
 #data file sirius-20180123-115357-big-000.data
