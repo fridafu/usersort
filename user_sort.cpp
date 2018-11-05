@@ -74,6 +74,10 @@
     //m_nai_t er dermed en matrise med tid på x-aksen og NaI-detektornummer på y-aksen
     //m_nai_e er matrise med gammaenergi på x-aksen og NaI-detektornummer på y-aksen
      Histogram2Dp m_alfna, m_alfna_bg;
+
+    //Individual ex - gamma matrices:
+     Histogram2Dp m_alfna_individual[30];
+     Histogram2Dp m_alfna_bg_individual[30];
     //ALFNA og ALFNABAKGRUNN defineres
      Histogram2Dp m_alfna_nofiss,   m_alfna_fiss, m_alfna_fiss_promptFiss;
      Histogram2Dp m_alfna_bg_nofiss,              m_alfna_bg_fiss_promptFiss, m_alfna_bg_fiss_bg;
@@ -274,6 +278,13 @@ bool UserXY::Command(const std::string& cmd)
 
      m_alfna =      Mat( "m_alfna", "E(NaI) : E_{x}",
                         2000, -2000, 14000, "E(NaI) [keV]", 2000, -2000, 14000, "E_{x} [keV]" );
+
+     for(int detno =0; detno<30; detno++){
+        m_alfna_individual[detno] = Mat( ioprintf("m_alfna_individual%d", detno), ioprintf("E(LaBr3) : Ex det %d", detno),
+                                2000, -2000, 14000, "E(NaI) [keV]", 2000, -2000, 14000, "E_{x} [keV]");
+        m_alfna_bg_individual[detno] = Mat( ioprintf("m_alfna_individual%d", detno), ioprintf("E(LaBr3) : Ex det %d", detno),
+                                2000, -2000, 14000, "E(NaI) [keV]", 2000, -2000, 14000, "E_{x} [keV]");
+     }
      m_alfna_nofiss = Mat( "m_alfna_nofiss", "E(NaI) : E_{x} veto for fission",
                          2000, -2000, 14000, "E(NaI) [keV]", 2000, -2000, 14000, "E_{x} [keV]" );
      m_alfna_bg =   Mat( "m_alfna_bg", "E(NaI) : E_{x} background",
@@ -779,7 +790,7 @@ bool UserXY::Sort(const Event& event)
         -1.5558e-6,
         -1.6023e-6,
         -1.6550e-6};
-        
+
 // float a0_ex[8] ={
 //         1.5169e+4,
 //         1.5168e+4,
