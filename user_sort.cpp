@@ -282,7 +282,7 @@ bool UserXY::Command(const std::string& cmd)
      for(int detno =0; detno<30; detno++){
         m_alfna_individual[detno] = Mat( ioprintf("m_alfna_individual%d", detno), ioprintf("E(LaBr3) : Ex det %d", detno),
                                 2000, -2000, 14000, "E(NaI) [keV]", 2000, -2000, 14000, "E_{x} [keV]");
-        m_alfna_bg_individual[detno] = Mat( ioprintf("m_alfna_individual%d", detno), ioprintf("E(LaBr3) : Ex det %d", detno),
+        m_alfna_bg_individual[detno] = Mat( ioprintf("m_alfna_bg_individual%d", detno), ioprintf("E(LaBr3) : Ex det %d", detno),
                                 2000, -2000, 14000, "E(NaI) [keV]", 2000, -2000, 14000, "E_{x} [keV]");
      }
      m_alfna_nofiss = Mat( "m_alfna_nofiss", "E(NaI) : E_{x} veto for fission",
@@ -933,10 +933,12 @@ bool UserXY::Sort(const Event& event)
         if( !IsPPACChannel(id) && CheckNaIpromptGate(na_t_c) ) {
             weight = 1;
             m_alfna->Fill( na_e_int, ex_int, weight);
+            m_alfna_individual[id]->Fill(na_e_int, ex_int);
         } 
         else if( !IsPPACChannel(id) && CheckNaIbgGate(na_t_c) ) {
             weight = -1;
             m_alfna->Fill( na_e_int, ex_int, weight);          // bg substraction from the random gate
+            m_alfna_bg_individual[id]->Fill(na_e_int, ex_int);
             m_alfna_bg->Fill( na_e_int, ex_int );   
         }
         
