@@ -761,36 +761,41 @@ bool UserXY::Sort(const Event& event)
 
      //Didn't find the mistake, hard coding in the numbers from QKinz
      // constant [keV]
-     float a0_ex[8] ={
-        1.5168e+4,
-        1.5521e+4,
-        1.5514e+4,
-        1.5505e+4,
-        1.5495e+4,
-        1.5484e+4,
-        1.5471e+4,
-        1.5455e+4};
+
+     //Disse er for Si-28:
+     float a0_ex[8] ={14.533325e+3,
+14.532849e+3,
+14.532650e+3,
+14.529979e+3,
+14.527384e+3,
+14.523407e+3,
+14.517837e+3,
+14.510415e+3};
 
     // first order [no unit]
-    float a1_ex[8]={ -9.9171e-1,
-        -9.6197e-1,
-        -9.6096e-1,
-        -9.5981e-1,
-        -9.5852e-1,
-        -9.5707e-1,
-        -9.5545e-1,
-        -9.5363e-1};
+    float a1_ex[8]={     
+-1.030173 ,
+ -1.027640,
+ -1.025162,
+ -1.022221,
+ -1.019329,
+ -1.016213,
+ -1.012856,
+ -1.009234};
 
     //second order [keV^-1]
-    float a2_ex[8]={ -1.166e-6,
-        -1.4187e-6,
-        -1.4466e-6,
-        -1.4785e-6,
-        -1.5148e-6,
-        -1.5558e-6,
-        -1.6023e-6,
-        -1.6550e-6};
+    float a2_ex[8]={
+ -0.001239e-3, 
+ -1.302e-6 ,
+ -1.357e-6 ,
+ -1.432e-6 ,
+ -1.500e-6 ,
+ -1.575e-6 ,
+ -1.657e-6 ,
+ -1.748e-6};
 
+
+//Disse er for Zn-68
 // float a0_ex[8] ={
 //         1.5169e+4,
 //         1.5168e+4,
@@ -832,7 +837,6 @@ bool UserXY::Sort(const Event& event)
 
      h_ex->Fill( ex_int );
      h_ex_r[dei]->Fill( ex_int );
-     
 
      //particle spectrum with veto for fission
      if( fiss==0 ) {h_ex_nofiss->Fill( ex_int );}
@@ -930,12 +934,12 @@ bool UserXY::Sort(const Event& event)
         float weight = 1;
 
         //Particle-gamma matrix all together
-        if( !IsPPACChannel(id) && CheckNaIpromptGate(na_t_c) ) {
+        if(CheckNaIpromptGate(na_t_c) ) {
             weight = 1;
             m_alfna->Fill( na_e_int, ex_int, weight);
             m_alfna_individual[id]->Fill(na_e_int, ex_int);
         } 
-        else if( !IsPPACChannel(id) && CheckNaIbgGate(na_t_c) ) {
+        else if(CheckNaIbgGate(na_t_c) ) {
             weight = -1;
             m_alfna->Fill( na_e_int, ex_int, weight);          // bg substraction from the random gate
             m_alfna_bg_individual[id]->Fill(na_e_int, ex_int);
