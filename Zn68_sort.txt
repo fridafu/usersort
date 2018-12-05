@@ -8,7 +8,7 @@ gain file gainshifts_si28_oscarcal.dat
 
 # (constant fraction) cactus energy correction parameters for cactus time
 parameter tnai_corr_enai = 0 1 0 0
-# parameter tnai_corr_enai = -5.52368 18201.9 210.387 -0.00125989
+# parameter tnai_corr_enai = -2.083097 4862.15 64.5214 -0.000121372
 
 # (constant fraction) siri energy correction parameters for cactus time
 parameter tnai_corr_esi  = 0 1 0 0
@@ -79,8 +79,8 @@ parameter ex_corr_exp    =     0 1 \
 # as the ones that are filled, and make sure you "hit" a top!
 # parameter = lower cut of prompt ,     higher gate of prompt peak,  \
 #             lower cut on backgr.,     higher cut backgr.
-parameter nai_time_cuts = 190 220 \
-                          300 330
+parameter nai_time_cuts = 190 210 \
+                         287 307
 
 ############## Attention when no PPACs are used ###########################
 # define id of NaI detectors and PPAC detectors (need to change usersort for more then four PPACs!)

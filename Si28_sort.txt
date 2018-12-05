@@ -8,11 +8,11 @@ gain file gainshifts_si28_oscarcal.dat
 
 # (constant fraction) cactus energy correction parameters for cactus time
 parameter tnai_corr_enai = 0 1 0 0
-# parameter tnai_corr_enai = -5.52368 18201.9 210.387 -0.00125989
+# parameter tnai_corr_enai = -2.083097 4862.15 64.5214 -0.000121372
 
 # (constant fraction) siri energy correction parameters for cactus time
 parameter tnai_corr_esi  = 0 1 0 0
-# parameter tnai_corr_esi  = 50.4471 -475514 4506.25 -0.00185164
+# parameter tnai_corr_esi  = 50.4471 -475514 458.034 -0.0002158956
 
 ################ Only when PPACs are used ##################################
 # (constant fraction) engery/time correction parameters for PPAC
@@ -63,14 +63,14 @@ parameter ex_from_ede    = 14.533325e3 -1.030173 -0.001239e-3 \
 14.510415e+3 -1.009234 -1.748e-6
 
 # empirical excitation energy correction for the above, e.g. from known peaks
-parameter ex_corr_exp    =     0 1 \
-    0 1 \
-    0 1 \
-    0 1 \
-    0 1 \
-    0 1 \
-    0 1 \
-    0 1 \
+parameter ex_corr_exp    =     11 1 \
+    8 1 \
+    8 1 \
+    8 1 \
+    8 1 \
+    8 1 \
+    10 1 \
+    14 1 \
 
 # NaI time gates, for making the ALFNA matrices 
 # found by looking at the m_nai_t plot and projecting it
@@ -79,8 +79,8 @@ parameter ex_corr_exp    =     0 1 \
 # as the ones that are filled, and make sure you "hit" a top!
 # parameter = lower cut of prompt ,     higher gate of prompt peak,  \
 #             lower cut on backgr.,     higher cut backgr.
-parameter nai_time_cuts = 190 220 \
-                          300 330
+parameter nai_time_cuts = 190 210 \
+                         287 307
 
 ############## Attention when no PPACs are used ###########################
 # define id of NaI detectors and PPAC detectors (need to change usersort for more then four PPACs!)
