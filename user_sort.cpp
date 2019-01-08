@@ -228,7 +228,7 @@ bool UserXY::Command(const std::string& cmd)
 //    const int max_e = 20000, max_de = 10000;
     //Changed the maximum energy (x axis) and maximum delta energy (y axis) into something sensible for this plot
     //Don´t have to zoome like crazy everytime I make a particle spectrum :)
-    const int max_e = 15000, max_de = 6000;
+    const int max_e = 15000, max_de = 5000;
 
      m_back = Mat( "m_back", "back detector energies",
                   2000, 0, max_e, "E(Si) [keV]", 8, 0, 8, "detector nr." );
@@ -763,70 +763,69 @@ bool UserXY::Sort(const Event& event)
      // constant [keV]
 
      //Disse er for Si-28:
-     float a0_ex[8] ={14.533325e+3,
-14.532849e+3,
-14.532650e+3,
-14.529979e+3,
-14.527384e+3,
-14.523407e+3,
-14.517837e+3,
-14.510415e+3};
+     //float a0_ex[8] ={14.533325e+3,
+//4.532849e+3,
+//4.532650e+3,
+//4.529979e+3,
+//4.527384e+3,
+//4.523407e+3,
+//4.517837e+3,
+//4.510415e+3};
 
-    // first order [no unit]
-    float a1_ex[8]={     
--1.030173 ,
- -1.027640,
- -1.025162,
- -1.022221,
- -1.019329,
- -1.016213,
- -1.012856,
- -1.009234};
+//   // first order [no unit]
+//   float a1_ex[8]={     
+//1.030173 ,
+//-1.027640,
+//-1.025162,
+//-1.022221,
+//-1.019329,
+//-1.016213,
+//-1.012856,
+//-1.009234};
 
-    //second order [keV^-1]
-    float a2_ex[8]={
- -0.001239e-3, 
- -1.302e-6 ,
- -1.357e-6 ,
- -1.432e-6 ,
- -1.500e-6 ,
- -1.575e-6 ,
- -1.657e-6 ,
- -1.748e-6};
+//   //second order [keV^-1]
+//   float a2_ex[8]={
+//-0.001239e-3, 
+//-1.302e-6 ,
+//-1.357e-6 ,
+//-1.432e-6 ,
+//-1.500e-6 ,
+//-1.575e-6 ,
+//-1.657e-6 ,
+//-1.748e-6};
 
 
 //Disse er for Zn-68
 
-    // float a0_ex[8] ={
-    //     1.4533e+4,
-    //     1.4532e+4,
-    //     1.4532e+4,
-    //     1.4530e+4,
-    //     1.4527e+4,
-    //     1.4523e+4,
-    //     1.4518e+4,
-    //     1.4510e+4};
-    
-    // // first order [no unit]
-    // float a1_ex[8]={ -1.030173,
-    //     -1.02764,
-    //     -1.02516,
-    //     -1.02222,
-    //     -1.01933,
-    //     -1.016213,
-    //     -1.012856,
-    //     -1.009234};
-    
-    // //second order [keV^-1]
-    // float a2_ex[8]={ -1.239e-6,
-    //     -1.302e-6,
-    //     -1.357e-6,
-    //     -1.432e-6,
-    //     -1.500e-6,
-    //     -1.5758e-6,
-    //     -1.657e-6,
-    //     -1.748e-6};
-
+     float a0_ex[8] ={
+         15.169624e3,
+         1.5521e+4,
+         1.5514e+4,
+         1.5505e+4,
+         1.5495e+4,
+         1.5484e+4,
+         1.5471e+4,
+         1.5455e+4};
+  
+     // first order [no unit]
+     float a1_ex[8]={ -0.992924,
+         -9.6197e-1,
+         -9.6096e-1,
+         -9.5981e-1,
+         -9.5852e-1,
+         -9.5707e-1,
+         -9.5545e-1,
+         -9.5363e-1};
+  
+     //second order [keV^-1]
+     float a2_ex[8]={ -0.001135e-3,
+         -1.4187e-6,
+         -1.4466e-6,
+         -1.4785e-6,
+         -1.5148e-6,
+         -1.5558e-6,
+         -1.6023e-6,
+         -1.6550e-6};
 
     // fit of kinz Ex(E+DE)
     //hardcoding the second order transformation    
