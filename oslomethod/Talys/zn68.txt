@@ -1,0 +1,9 @@
+projectile n
+element Zn
+mass 67
+energy n0-20.grid
+fileresidual y
+astro y
+ldmodel 1
+outdensity y
+outgamma y

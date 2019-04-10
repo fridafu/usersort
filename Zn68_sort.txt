@@ -2,13 +2,12 @@
 #   parameter gain_e = ...
 # and so on
 #gain file gainshifts_plain.dat
-#gain file gainshifts_zn68.dat
 gain file gainshifts_si28_oscarcal.dat
 
 
 # (constant fraction) cactus energy correction parameters for cactus time
 parameter tnai_corr_enai = 0 1 0 0
-# parameter tnai_corr_enai = -2.083097 4862.15 64.5214 -0.000121372
+parameter tnai_corr_enai = -0.838857 2192.67 230.828 -8.44176e-05
 
 # (constant fraction) siri energy correction parameters for cactus time
 parameter tnai_corr_esi  = 0 1 0 0
@@ -39,7 +38,7 @@ parameter ede_rect  = 500 250 30 500
 
 # Thickness gate for proton banana
 # parameter thick_range = 82 12 0
-parameter thick_range = 125 15 0
+parameter thick_range = 130 20 0
 # parameter thick_range = 140 20 0
 # parameter thick_range = 276 75 0
 # parameter thick_range = 230 25 0
@@ -79,8 +78,8 @@ parameter ex_corr_exp    =     0 1 \
 # as the ones that are filled, and make sure you "hit" a top!
 # parameter = lower cut of prompt ,     higher gate of prompt peak,  \
 #             lower cut on backgr.,     higher cut backgr.
-parameter nai_time_cuts = 190 210 \
-                         287 307
+parameter nai_time_cuts = 193 205 \
+                         144 156
 
 ############## Attention when no PPACs are used ###########################
 # define id of NaI detectors and PPAC detectors (need to change usersort for more then four PPACs!)
@@ -143,3 +142,4 @@ export mama m_alfna alfna
 # at the end, spectra are dumped to the root file
 # root output file
 export root offline_Zn68_pp_calsiri.root
+export mama m_alfna alfna.m

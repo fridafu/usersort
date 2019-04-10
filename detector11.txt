@@ -1,0 +1,62 @@
+root [1] m_alfna_individual11_px->Draw()
+root [2] TFitEditor::DoFit - using function PrevFitTMP  0x7fc0ffac43b0
+ FCN=29.8811 FROM MIGRAD    STATUS=CONVERGED      63 CALLS          64 TOTAL
+                     EDM=4.23113e-07    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  Constant     1.45311e+02   5.74135e+00   1.24625e-02   1.93664e-04
+   2  Mean         2.82762e+03   7.02033e-01   1.88671e-03  -1.36248e-04
+   3  Sigma        2.19898e+01   5.21804e-01   1.61083e-05   1.19899e-01
+
+
+root [2] m_alfna_individual11_py->Draw()
+root [3] TFitEditor::DoFit - using function PrevFitTMP  0x7fc0ffd421d0
+ FCN=128.404 FROM MIGRAD    STATUS=CONVERGED      69 CALLS          70 TOTAL
+                     EDM=6.00525e-09    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  Constant     2.94497e+01   1.22673e+00   5.44481e-03  -1.80813e-05
+   2  Mean         4.55846e+03   3.35163e+00   1.86084e-02  -3.22636e-05
+   3  Sigma        9.83911e+01   2.57800e+00   3.65606e-05  -2.91945e-03
+
+root [3] m_alfna_individual11_px->Draw()
+root [4] TFitEditor::DoFit - using function PrevFitTMP  0x7fc0ffaf8010
+ FCN=37.1572 FROM MIGRAD    STATUS=CONVERGED      71 CALLS          72 TOTAL
+                     EDM=4.95675e-07    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  Constant     5.86170e+01   3.44954e+00   7.84236e-03   2.19211e-05
+   2  Mean         4.49632e+03   1.24140e+00   3.73403e-03   3.82286e-04
+   3  Sigma        2.77436e+01   1.08726e+00   2.73730e-05  -7.13865e-02
+
+root [4] m_alfna_individual11_py->Draw()
+ FCN=83.1325 FROM MIGRAD    STATUS=CONVERGED      69 CALLS          70 TOTAL
+                     EDM=7.52836e-07    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  Constant     1.21165e+01   7.36228e-01   2.52242e-03   2.24048e-05
+   2  Mean         6.26568e+03   6.35848e+00   2.82062e-02   7.95134e-05
+   3  Sigma        1.25804e+02   5.67327e+00   5.21901e-05   6.94689e-02
+
+root [5] m_alfna_individual11_px->Draw()
+ FCN=46.4226 FROM MIGRAD    STATUS=CONVERGED      84 CALLS          85 TOTAL
+                     EDM=1.26632e-09    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  Constant     3.21229e+01   2.39664e+00   5.87875e-03   1.43980e-05
+   2  Mean         6.87753e+03   1.84368e+00   6.19571e-03  -2.35723e-05
+   3  Sigma        3.35990e+01   1.73954e+00   3.40838e-05   1.96945e-03
+
+
+root [6] m_alfna_individual11_py->Draw()
+root [7] TFitEditor::DoFit - using function PrevFitTMP  0x7fc0ffc14ed0
+ FCN=89.6411 FROM MIGRAD    STATUS=CONVERGED      78 CALLS          79 TOTAL
+                     EDM=1.40152e-07    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  Constant     6.85353e+00   5.59300e-01   1.85684e-03   7.76567e-04
+   2  Mean         6.85594e+03   9.98961e+00   4.54358e-02   9.39063e-06
+   3  Sigma        1.47802e+02   1.05761e+01   7.92492e-05   2.98899e-02
+
+
+
