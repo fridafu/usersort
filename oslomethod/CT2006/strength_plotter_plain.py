@@ -104,7 +104,7 @@ plt.plot(strengthext[0:iBn,0], strengthext[:iBn,1], ":", color='red'
 data2 = np.loadtxt('UnfoldedCrossSections_evaluated_at_Emax_RSFZn68.dat',dtype = float)
 plt.plot(data2[:,0], data2[:,1], label='$\gamma$,n-data')
 strength_export = strength[strength[:,1]>0]
-# np.savetxt("strength_export.txt",strength_export, header="E y yerr")
+np.savetxt("strength_export.txt",strength_export, header="E y yerr")
 
 # plt.xlim([0,15])
 # plt.ylim([1e-8,5e-6])

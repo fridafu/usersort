@@ -57,14 +57,14 @@
    extLgraph->SetLineStyle(1);
    extLgraph->DrawGraph(40,&extLgraph->GetX()[0],&extLgraph->GetY()[0],"L");
    extHgraph->SetLineStyle(1);
-   extHgraph->DrawGraph(41,&extHgraph->GetX()[54],&extHgraph->GetY()[54],"L");
+   extHgraph->DrawGraph(49,&extHgraph->GetX()[46],&extHgraph->GetY()[46],"L");
    TArrow *arrow1 = new TArrow(2.620e+00,4.856e+02,2.620e+00,1.324e+02,0.02,">");
    arrow1->Draw();
    TArrow *arrow2 = new TArrow(4.156e+00,1.689e+03,4.156e+00,4.605e+02,0.02,">");
    arrow2->Draw();
-   TArrow *arrow3 = new TArrow(6.076e+00,7.924e+03,6.076e+00,2.160e+03,0.02,">");
+   TArrow *arrow3 = new TArrow(5.052e+00,3.569e+03,5.052e+00,9.729e+02,0.02,">");
    arrow3->Draw();
-   TArrow *arrow4 = new TArrow(7.996e+00,1.906e+04,7.996e+00,5.196e+03,0.02,">");
+   TArrow *arrow4 = new TArrow(7.100e+00,1.647e+04,7.100e+00,4.490e+03,0.02,">");
    arrow4->Draw();
    c1->Update();
    c1->Print("sigext.pdf");
